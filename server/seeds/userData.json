@@ -1,4 +1,4 @@
-{
+[
     {
         "username": "joolscustomer",
         "email": "jools@email.com",
@@ -24,4 +24,4 @@
         "email": "heath@email.com",
         "password": "password5"
     }
-}
+]
