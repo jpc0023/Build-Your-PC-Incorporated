@@ -5,11 +5,11 @@
 
 
 ### Table of Contents
-[Installation Instructions](#installation-instructions)
-[Demo Video](#demo-video)
-[Deployment Link](#deployment-link)
-[Software Used](#software-used)
-[Credits](#credits)
+- [Installation Instructions](#installation-instructions)
+- [Demo Video](#demo-video)
+- [Deployment Link](#deployment-link)
+- [Software Used](#software-used)
+- [Credits](#credits)
 
 ## Installation Instructions
 
@@ -37,7 +37,7 @@
 - mongoose package
 
 ## Credits
-James Crowell
-Semi Harris
-Pao Herr
-Michael Brown
+- James Crowell
+- Semi Harris
+- Pao Herr
+- Michael Brown
