@@ -1,0 +1,104 @@
+{
+    {
+        "name": "Samsung Odyssey 49'' G9 Curved Qled Gaming Monitor",
+        "description": "a monniter from Samsung",
+        "price": 114.19,
+        "category": "monitor"
+    },
+    {
+        "name": "AOC 27G2 Frameless Gaming IPS Monitor",
+        "description": "a monitor from AOG",
+        "price": 156.43,
+        "category": "monitor"
+    },
+    {
+        "name": "Element EMFPAC22B 22'' 1080p Frameless LCD PC Monitor",
+        "description": "a monitor from Element",
+        "price": 200.35,
+        "category": "monitor"
+    },
+    {
+        "name": "HP - 21.5'' IPS LED Full HD FreeSync Monitor",
+        "description": "a monitor from HP",
+        "price": 45.44,
+        "category": "monitor"
+    },
+    {
+        "name": "Sceptre 24'' E248W-19203S 75Hz Full HD 1080p LED Monitor",
+        "description": "a monitor from Sceptre",
+        "price": 162.00,
+        "category": "monitor"
+    },
+    {
+        "name": "Asus- ROG Strix 49'' Curved FHD 144Hz FreeSync Gaming Monitor",
+        "description": "a monitor from Asus",
+        "price": 122.19,
+        "category": "monitor"
+    },
+    {
+        "name": "Windows 10 OS",
+        "description": "The most recent operating system for Windows",
+        "price": 49.99,
+        "category": "OS"
+    },
+    {
+        "name": "Monterey",
+        "description": "The most recent operating system for Apple",
+        "price": 49.99,
+        "category": "OS"
+    },
+    {
+        "name": "Ubuntu",
+        "description": "One of the most popular operating system for Linux",
+        "price": 0,
+        "category": "OS"
+    },
+    {
+        "name": "Logitech MX Keys Wireless Keyboard - Black",
+        "description": "a keyboard from Logitech",
+        "price": 175.11,
+        "category": "input device-keyboard"
+    },
+    {
+        "name": "Keychron K2 Wireless Bluetooth/USB Wired Gaming Mechanical",
+        "description": "a keyboard from Keychron",
+        "price": 42.38,
+        "category": "input device-keyboard"
+    },
+    {
+        "name": "Razer Huntsman Elite Keyboard",
+        "description": "a keyboard from Razer",
+        "price": 133.35,
+        "category": "input device-keyboard"
+    },
+    {
+        "name": "Dell KB216 USB Keyboard",
+        "description": "a keyboard from Dell",
+        "price": 212.77,
+        "category": "input device-keyboard"
+    },
+    {
+        "name": "Glorius Model O Minus Gaming Mouse - Matte Black",
+        "description": "a compouter mouse from Glorius",
+        "price": 41.55,
+        "category": "input device-mouse"
+    },
+    {
+        "name": "Microsoft 222-00017 Bluetooth Ergonomic Mouse - Glacier",
+        "description": "a computer mose from Microsoft",
+        "price": 74.73,
+        "category": "input device-mouse"
+    },
+    {
+        "name": "Apple Magic Mouse 2 Rechargeable Bluetooth Wireless Multitouch",
+        "description": "a computer mouse from Apple",
+        "price": 55.37,
+        "category": "input device-mouse"
+    },
+    {
+        "name": "SteelSeries - Rival 3 Wired Optical Gaming Mouse",
+        "description": "a computer mouse from SteelSeries",
+        "price": 107.87,
+        "category": "input device-mouse"
+    }
+}
