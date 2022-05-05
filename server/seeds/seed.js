@@ -4,6 +4,7 @@ const { User, Product } = require('../models');
 const userData = require('./userData.json');
 const productData = require('./productData.json');
 
+//need to add cpu, motherboard, and case data to productData
 
 db.once('open', async () => {
   // clean database
