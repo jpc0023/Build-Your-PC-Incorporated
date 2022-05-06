@@ -1,5 +1,95 @@
 [
     {
+        "name": "Montech X3 Mesh 6pcs, 3 x 140mm& 3 x 120mm Fixed RGB Lighting Fans ATX Mid-Tower PC Gaming Case",
+        "description": "a desktop case that is from Montech",
+        "price": 152.61,
+        "category": "case"
+    },
+    {
+        "name": "LIAN LI PC-O11 Dynamic White Tempered Glass on the Front and Left Sides, Chassis Body SECC ATX Mid Tower Gaming Computer Case",
+        "description": "a desktop case that is from Lian",
+        "price": 242.97,
+        "category": "case"
+    },
+    {
+        "name": "GameMax ATX Mid Tower Black / Grey Computer Case",
+        "description": "a desktop case that is from Gamemax",
+        "price": 214.63,
+        "category": "case"
+    },
+    {
+        "name": "Thermaltake The Tower 900 Computer Case ",
+        "description": "a desktop case that is from Thermaltake",
+        "price": 196.74,
+        "category": "case"
+    },
+    {
+        "name": "Sama ATX Mid Tower Black Computer Case",
+        "description": "a desktop case that is from Sama",
+        "price": 189.29,
+        "category": "case"
+    },
+    {
+        "name": "Vetroo K1 Pangolin Mid-Tower ATX PC Gaming Case",
+        "description": "a desktop case that is from Vetroo",
+        "price": 195.54,
+        "category": "case"
+    },
+    {
+        "name": "NZXT H510 Elite - Premium Mid-Tower ATX Case PC Gaming Case ",
+        "description": "a desktop case that is from NZXT",
+        "price": 240.74,
+        "category": "case"
+    },
+    {
+        "name": "Diypc Rainbow-Flash-F4-P Pink USB 3.0 Steel / Tempered Glass ATX Mid Tower Computer Case",
+        "description": "a desktop case that is from Diypc",
+        "price": 134.60,
+        "category": "case"
+    },
+    {
+        "name": "Asus B550-F ROG Strix Gaming AMD AM4 ATX Motherboard",
+        "description": "a motherboard from Asus",
+        "price": 270.85,
+        "category": "motherboard"
+    },
+    {
+        "name": "MSI Pro Z690-A DDR4 LGA 1700 ATX Motherboard",
+        "description": "a motherboard from MSI",
+        "price": 297.82,
+        "category": "motherboard"
+    },
+    {
+        "name": "Gigabyte B550I Aorus Pro Ax AMD AM4 Mini-ITX Motherboard",
+        "description": "a motherboard from Aorus",
+        "price": 353.77,
+        "category": "motherboard"
+    },
+    {
+        "name": "Intel Core i9-12900K Desktop Processor 16 (8P+8E) Cores up to 5.2 GHz Unlocked LGA1700 600 Series Chipset 125W",
+        "description": "a Intel processor with 16 cores",
+        "price": 358.18,
+        "category": "CPU"
+    },
+    {
+        "name": "AMD Ryzen 9 5900X 12-core, 24-Thread Unlocked Desktop Processor",
+        "description": "a Ryzen processor with 12 cores",
+        "price": 260.72,
+        "category": "CPU"
+    },
+    {
+        "name": "Intel® Core™ i7-11700 Desktop Processor 8 Cores up to 4.9 GHz LGA1200 (Intel® 500 Series & Select 400 Series Chipset) 65W",
+        "description": "a Intel processor with 8 cores",
+        "price": 294.26,
+        "category": "CPU"
+    },
+    {
+        "name": "AMD Ryzen 7 5700G 8-Core, 16-Thread Unlocked Desktop Processor with Radeon Graphics",
+        "description": "a Ryzen processor with 8 cores",
+        "price": 262.04,
+        "category": "CPU"
+    },
+    {
         "name": "MSI Gaming GeForce RTX 3050 8GB GDDR6 Video Card",
         "description": "a graphics card from MSI",
         "price": 355.80,
