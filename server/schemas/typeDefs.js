@@ -27,10 +27,11 @@ const typeDefs= gql`
         product(name: String, category: String): [Product]
     }
 
-    type Mutation {
-
-    }
-
 `;
 
-module.exports= typeDefs
+module.exports= typeDefs;
+/**
+ * type Mutation {
+
+    }
+ */

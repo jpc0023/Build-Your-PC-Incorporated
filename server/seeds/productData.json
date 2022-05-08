@@ -153,31 +153,31 @@
         "name": "Kimtigo KTP-650 SSD 256GB 512GB M.2 2280 NVME PCIE Gen 3x4",
         "description": "a solid state drive from Kimtigo",
         "price": 89.47,
-        "category": "storage device"
+        "category": "storage_device"
     },
     {
         "name": "WD Blue 2TB Hard Drive - 3.5 Internal SATA",
         "description": "a internal hard drive from WD",
         "price": 151.50,
-        "category": "storage drive"
+        "category": "storage_device"
     },
     {
         "name": "Seagate Barracuda ST2000DM008 2 TB 3.5 Internal Hard Drive - SATA",
         "description": "a internal hard drive from Seagate",
         "price": 151.85,
-        "category": "storage drive"
+        "category": "storage_device"
     },
     {
         "name": "Samsung MZ-V8P2T0B-AM 980 Pro 2 TB M.2 SSD",
         "description": "a solid state drive from Samsung",
         "price": 147.55,
-        "category": "storage drive"
+        "category": "storage_device"
     },
     {
         "name": "Toshiba Hdwl120xzsta L200 2TB Laptop Internal Hard Drive",
         "description": "a internal hard drive from Toshiba",
         "price": 84.68,
-        "category": "storage drive"
+        "category": "storage_device"
     },
     {
         "name": "Corsair iCUE H150i Elite LCD Display Liquid CPU Cooler",
@@ -213,37 +213,37 @@
         "name": "Thermaltake - Smart 700W ATX 80 Plus Power Supply",
         "description": "a power supply unit from Thermaltake",
         "price": 103.40,
-        "category": "power supply unit"
+        "category": "power_supply_unit"
     },
     {
         "name": "Corsair CV Series Cv750 750W 80 Plus Power Supply",
         "description": "a power supply unit from Corsair",
         "price": 105.94,
-        "category": "power supply unit"
+        "category": "power_supply_unit"
     },
     {
         "name": "FlePow Power Supply 850W 80 Plus Gold with RGB Light",
         "description": "a power supply unit from FlePow",
         "price": 82.00,
-        "category": "power supply unit"
+        "category": "power_supply_unit"
     },
     {
         "name": "EVGA 500BR Power Supply 500W 80 Plus",
         "description": "a power supply unit from EVGA",
         "price": 100.09,
-        "category": "power supply unit"
+        "category": "power_supply_unit"
     },
     {
         "name": "BlitzWolf BW-CP1 400W PC ATX 80 Plus Power Supply",
         "description": "a power supply unit from BlitzWolf",
         "price": 165.35,
-        "category": "power supply unit"
+        "category": "power_supply_unit"
     },
     {
         "name": "Solid Gear SDGR Flex320 320W Mini ITX Flex ATX Power Supply",
         "description": "a power supply unit from Solid Gear",
         "price": 91.71,
-        "category": "power supply unit"
+        "category": "power_supply_unit"
     },
     {
         "name": "Samsung Odyssey 49'' G9 Curved Qled Gaming Monitor",
@@ -303,48 +303,48 @@
         "name": "Logitech MX Keys Wireless Keyboard - Black",
         "description": "a keyboard from Logitech",
         "price": 175.11,
-        "category": "input device-keyboard"
+        "category": "keyboard"
     },
     {
         "name": "Keychron K2 Wireless Bluetooth/USB Wired Gaming Mechanical",
         "description": "a keyboard from Keychron",
         "price": 42.38,
-        "category": "input device-keyboard"
+        "category": "keyboard"
     },
     {
         "name": "Razer Huntsman Elite Keyboard",
         "description": "a keyboard from Razer",
         "price": 133.35,
-        "category": "input device-keyboard"
+        "category": "keyboard"
     },
     {
         "name": "Dell KB216 USB Keyboard",
         "description": "a keyboard from Dell",
         "price": 212.77,
-        "category": "input device-keyboard"
+        "category": "keyboard"
     },
     {
         "name": "Glorius Model O Minus Gaming Mouse - Matte Black",
         "description": "a compouter mouse from Glorius",
         "price": 41.55,
-        "category": "input device-mouse"
+        "category": "mouse"
     },
     {
         "name": "Microsoft 222-00017 Bluetooth Ergonomic Mouse - Glacier",
         "description": "a computer mose from Microsoft",
         "price": 74.73,
-        "category": "input device-mouse"
+        "category": "mouse"
     },
     {
         "name": "Apple Magic Mouse 2 Rechargeable Bluetooth Wireless Multitouch",
         "description": "a computer mouse from Apple",
         "price": 55.37,
-        "category": "input device-mouse"
+        "category": "mouse"
     },
     {
         "name": "SteelSeries - Rival 3 Wired Optical Gaming Mouse",
         "description": "a computer mouse from SteelSeries",
         "price": 107.87,
-        "category": "input device-mouse"
+        "category": "mouse"
     }
 ]
