@@ -1,5 +1,6 @@
+const { json } = require('express');
 const {Schema, model}= require('mongoose');
-const productSchema= require('./Product');
+const Product= require('./Product');
 
 const userSchema= new Schema(
     {
@@ -16,11 +17,16 @@ const userSchema= new Schema(
         },
 
         password: {
-            type: true,
-            required: ture
+            type: String,
+            required: true
         },
 
-        savedProducts: [productSchema]
+        //a list of the user's saved products will be saved here
+        savedProducts: [
+            {
+                type: Schema.Types.Array,
+                ref: 'Product'
+            }        ],
     },
     
     {
@@ -34,4 +40,4 @@ const userSchema= new Schema(
 
 const User= model('User', userSchema);
 
-module.exports= {User};
+module.exports= User;

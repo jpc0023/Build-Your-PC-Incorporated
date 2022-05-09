@@ -22,15 +22,9 @@ const productSchema= new Schema(
             type: String,
             required: true
         }
-    },
-
-    {
-        toJSON: {
-            virtuals: true
-        }
     }
 );
 
 const Product= model('Product', productSchema);
 
-module.exports= {Product};
+module.exports= Product;

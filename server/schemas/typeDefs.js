@@ -22,12 +22,16 @@ const typeDefs= gql`
         me: User
         users: [User]
         user(username: String!): User
-    }
 
-    type Mutation {
-
+        products: [Product]
+        product(name: String, category: String): [Product]
     }
 
 `;
 
-module.exports= typeDefs
+module.exports= typeDefs;
+/**
+ * type Mutation {
+
+    }
+ */
