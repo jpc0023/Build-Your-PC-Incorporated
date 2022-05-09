@@ -33,17 +33,4 @@ const productSchema = new Schema({
 
 const Product = mongoose.model('Product', productSchema);
 
-<<<<<<< HEAD
-        category: {
-            type: String,
-            required: true
-        }
-    }
-);
-
-const Product= model('Product', productSchema);
-
-module.exports= Product;
-=======
 module.exports = Product;
->>>>>>> 367cdd00b1cd23a658714f56fb7fc8ec014ac433
