@@ -1,6 +1,7 @@
 const { json } = require('express');
 const {Schema, model}= require('mongoose');
 const Product= require('./Product');
+const bcrypt= require('bcrypt');
 
 const userSchema= new Schema(
     {
@@ -26,7 +27,8 @@ const userSchema= new Schema(
             {
                 type: Schema.Types.Array,
                 ref: 'Product'
-            }        ],
+            }        
+        ],
     },
     
     {
@@ -36,7 +38,20 @@ const userSchema= new Schema(
     }
 );
 
-//maybe add password authentication below
+// set up pre-save middleware to create password
+userSchema.pre('save', async function(next) {
+    if (this.isNew || this.isModified('password')) {
+      const saltRounds = 10;
+      this.password = await bcrypt.hash(this.password, saltRounds);
+    }
+  
+    next();
+  });
+  
+  // compare the incoming password with the hashed password
+  userSchema.methods.isCorrectPassword = async function(password) {
+    return bcrypt.compare(password, this.password);
+  };
 
 const User= model('User', userSchema);
 

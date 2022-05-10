@@ -1,51 +1,94 @@
 const {User, Product}= require('../models');
-
+const {AuthenticationError}= require('apollo-server-express');
+const {signToken}= require('../utils/auth');
 
 const resolvers= {
     Query: {
         //get current user
-        me: async () => 
+        me: async (parent, current, context) => 
         {
-            //may not work, propable need auth to make to fesiable
-            return User.findOne({createdAt: -1})
-                .select('-__v -password')
-                .populate('products');
+            if (context.user)
+            {
+                const userData= await User.findOne({_id: context.user._id})
+                    .select('-__v -password')
+                    .populate('savedProducts');
+                
+                return userData;
+            }
+
+            throw new AuthenticationError('Not loged in!');
         },
 
         //get all users
         users: async () =>
         {
-            return User.find()
+            return await User.find()
                 .select('-__v -password')
-                .populate('products');
+                .populate('savedProducts');
         },
 
         //get a user with specific username
         user: async (parent, {username}) =>
         {
-            return User.findOne({username})
+            return await User.findOne({username})
                 .select('-__v -password')
-                .populate('products');
+                .populate('savedProducts');
         },
 
         //get all products
         products: async () =>
         {
-            return Product.find();
+            return await Product.find({});
         },
 
         //get a specific user, either by category or name
-        product: async (parent, {name, category}) =>
+        product: async (parent, {name}) =>
         {
-            if (name)
-            {
-                return Product.findOne({name});
-            }
-
-            return Product.findOne({category});
+           
+            return await Product.findOne({name});    
         },
 
-        //add mutation here
+        //get all products by specific category
+        productGroup: async (parent, {category}) =>
+        {
+            return await Product.find({category});
+        }
+
+    },
+
+    //add mutations here
+    Mutation: {
+        login: async (parent, {email, password}) => 
+        {
+            const user= await User.findOne({email});
+            if (!user)
+            {
+                throw new AuthenticationError('Wrong login info!');
+            }
+
+            const currentPW= await user.isCorrectPassword(password);
+            if (!currentPW)
+            {
+                throw new AuthenticationError('Wrong login info!')
+            }
+
+            const token= signToken(user);
+            return {user, token};
+        },
+
+        addUser: async (parent, args) => 
+        {
+            const user= await User.create(args);
+            const token= signToken(user);
+
+            return {user, token};
+        },
+
+        addProduct: async (parent, input) =>
+        {
+            const product= await Product.create(input);
+            return product;
+        }
     }
 };
 

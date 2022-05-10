@@ -33,11 +33,11 @@
 - dotenv package
 - express package
 - graphql package
-- jsonwebtoken (jwt) package
+- jsonwebtoken package (jwt)
 - mongoose package
 
 ## Credits
-- James Crowell
+- James Crowell (aka jpc0023)
 - Semi Harris
-- Pao Herr
-- Michael Brown
+- Pao Herr (aka p-her)
+- Michael Brown (aka randomguy1234)

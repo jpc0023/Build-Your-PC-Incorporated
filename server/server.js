@@ -1,5 +1,6 @@
 const express = require('express');
 const {ApolloServer}= require('apollo-server-express');
+const {authMiddleware}= require('./utils/auth');
 
 const {typeDefs, resolvers}= require('./schemas');
 
@@ -14,13 +15,15 @@ app.use(express.json());
 
 const server= new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  context: authMiddleware
 });
 
 const startApolloServer= async (typeDefs, resolvers) => 
 {
 
   await server.start();
+  server.applyMiddleware({ app });
 }
 
 

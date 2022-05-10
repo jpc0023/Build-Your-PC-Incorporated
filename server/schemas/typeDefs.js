@@ -5,7 +5,7 @@ const typeDefs= gql`
         _id: ID
         username: String!
         email: String!
-        savedProducts: [String]
+        savedProducts: [Product]
     }
 
     type Product {
@@ -13,10 +13,14 @@ const typeDefs= gql`
         name: String!
         description: String!
         price: Float
-        category: [String] # might need input type here instead of string
+        category: String 
     }
 
     # might need authentication here
+    type Auth {
+        token: ID!
+        user: User
+    }
 
     type Query {
         me: User
@@ -24,14 +28,20 @@ const typeDefs= gql`
         user(username: String!): User
 
         products: [Product]
-        product(name: String, category: String): [Product]
+        product(name: String): Product
+        productGroup(category: String): [Product]
+    }
+
+    type Mutation {
+        login(email: String!, password: String!): Auth
+        addUser(username: String!, email: String!, password: String!): Auth
+        addProduct(name: String, description: String, price: Float, category: String): Product
     }
 
 `;
 
 module.exports= typeDefs;
 /**
- * type Mutation {
-
-    }
+ * future mutation options:
+ * deleteUser, deleteProduct, updateUser, updateProduct
  */
