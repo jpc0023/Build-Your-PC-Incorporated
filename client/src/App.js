@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import {
   ApolloClient,
@@ -12,6 +13,7 @@ import { setContext } from '@apollo/client/link/context';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import CreateComputer from './pages/CreateComputer';
 
 
 const httpLink = createHttpLink({
@@ -44,7 +46,7 @@ function App() {
  
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
-
+              <Route exact path={"/create"} component={CreateComputer} />
 
   
             </Switch>
