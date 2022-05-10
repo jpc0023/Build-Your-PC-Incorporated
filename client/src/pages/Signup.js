@@ -14,8 +14,7 @@ function Signup(props) {
       variables: {
         email: formState.email,
         password: formState.password,
-        firstName: formState.firstName,
-        lastName: formState.lastName,
+        username: formState.username,
       },
     });
     const token = mutationResponse.data.addUser.token;
@@ -31,47 +30,44 @@ function Signup(props) {
   };
 
   return (
-    <div className="container">
-      <form className='form-container' onSubmit={handleFormSubmit}>
-        <div className="my-2">
+    <div className="container my-1">
+      <Link to="/login">← Go to Login</Link>
+
+      <h2>Signup</h2>
+      <form onSubmit={handleFormSubmit}>
+        <div className="flex-row space-between my-2">
+          <label htmlFor="username">Username:</label>
           <input
-            placeholder="First Name"
-            name="firstName"
-            type="text"
-            id="firstName"
+            placeholder="username"
+            name="username"
+            type="username"
+            id="username"
             onChange={handleChange}
           />
         </div>
-        <div className="my-2 ">
+
+        <div className="flex-row space-between my-2">
+          <label htmlFor="email">Email:</label>
           <input
-            placeholder="Last Name"
-            name="lastName"
-            type="text"
-            id="lastName"
-            onChange={handleChange}
-          />
-        </div>
-        <div className="my-2">
-          <input
-            placeholder="Email"
+            placeholder="youremail@test.com"
             name="email"
             type="email"
             id="email"
             onChange={handleChange}
           />
         </div>
-        <div className="my-2">
-
+        <div className="flex-row space-between my-2">
+          <label htmlFor="pwd">Password:</label>
           <input
-            placeholder="Password"
+            placeholder="******"
             name="password"
             type="password"
             id="pwd"
             onChange={handleChange}
           />
         </div>
-        <div className="submit-container">
-          <button type="submit">Sign up</button>
+        <div className="flex-row flex-end">
+          <button type="submit">Submit</button>
         </div>
       </form>
     </div>
