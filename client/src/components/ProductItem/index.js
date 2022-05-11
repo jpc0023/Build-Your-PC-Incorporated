@@ -11,7 +11,6 @@ function ProductItem(item) {
     name,
     _id,
     price,
-    category
   } = item;
 
   const { cart } = state
@@ -43,11 +42,11 @@ function ProductItem(item) {
         <p>{name}</p>
       </Link>
       <div>
-        <span>${price} --00{category}</span>
+        <span>${price}</span>
       </div>
-      <button onClick={addToCart}>Add to list</button>
+      <button onClick={addToCart}>Add to cart</button>
     </div>
   );
-};
+}
 
 export default ProductItem;

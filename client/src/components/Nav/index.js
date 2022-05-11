@@ -43,7 +43,7 @@ function Nav() {
     <header className="flex-row px-1">
       <h1>
         <Link to="/">
-          DreamPC
+        <span role="img" aria-label="shopping bag">🖥️ </span> Build Your PC
         </Link>
       </h1>
 
