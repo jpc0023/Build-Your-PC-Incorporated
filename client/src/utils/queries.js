@@ -32,9 +32,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       description
       price
       quantity
-      category {
-        name
-      }
+      category 
     }
   }
 `;
@@ -67,4 +65,22 @@ export const QUERY_USER = gql`
       }
     }
   }
+`;
+
+export const QUERY_USER_AND_PRODUCTS = gql `
+{
+  categories {
+    _id
+    name
+  }
+
+  products {
+    _id
+    name
+    description
+    price
+    quantity
+    category 
+  }
+}
 `;

@@ -1,12 +1,21 @@
 import React from "react";
+import { ADD_ORDER } from "../../utils/mutations";
+import { useMutation } from '@apollo/client';
 
 const DisplayParts = ({parts, category}) => {
     
     const computerPartsArray = [];
 
-    const handleFormSubmit = event => {
+    const [addOrder, {data}] = useMutation(ADD_ORDER)
+
+    const handleFormSubmit = async (event) => {
         event.preventDefault();
-        console.log('Working')
+
+        await addOrder({
+            variables: {products: computerPartsArray}
+        })
+
+        computerPartsArray.length = 0
     }
     
     const selectPart = (event,id) => {
@@ -31,30 +40,32 @@ const DisplayParts = ({parts, category}) => {
         return frags.join(' ');
       }
 
+
+
     return (
-        <div>
+        <form onSubmit={handleFormSubmit}>
             {category.map(category => (
-                        <form onSubmit={handleFormSubmit}>
-                            <h2 className="parts-h2">{capitalize(category)}</h2>
+                        <div>
+                            <h2 className="parts-h2">{capitalize(category.name)}</h2>
                             <div className="display-flex">
                             {parts.map(parts => {
-                                if(parts.category === category)
+                                if(parts.category === category.name)
                                 
                                 return  <div className="container-1">
                                         <h3 className="parts-h3">{parts.name}</h3>
                                         <p className="parts-p">{parts.description} </p>
                                         <p className="parts-p">${parts.price}</p>
-                                        <button className="btn-parts" type="button" onClick={function(event){ selectPart(event, parts.id);}}>Add</button>
+                                        <button className="btn-parts" type="button" onClick={function(event){ selectPart(event, parts._id);}}>Add</button>
                                     </div>              
                                 }
                             )}
                              </div>
-                        </form>
+                        </div>
             ))}
-        <button className="btn col-12 col-md-3" type="submit">
-            Create
-        </button>
-        </div>
+            <button className="btn col-12 col-md-3" type="submit">
+                Create
+            </button>
+        </form>
     )
 }
 

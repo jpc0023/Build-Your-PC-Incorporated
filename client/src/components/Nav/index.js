@@ -14,6 +14,8 @@ function Nav() {
               Logout
             </a>
           </li>
+
+          <Link to="/create">create</Link>
         </ul>
       );
     } else {

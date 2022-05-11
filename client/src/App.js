@@ -14,6 +14,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
 import CreateComputer from './pages/CreateComputer';
+import Computer from './pages/Computers'
 
 
 const httpLink = createHttpLink({
@@ -46,8 +47,8 @@ function App() {
  
               <Route exact path="/login" component={Login} />
               <Route exact path="/signup" component={Signup} />
-              <Route exact path={"/create"} component={CreateComputer} />
-
+              <Route exact path="/create" component={CreateComputer} />
+              <Route exaxt path="/computer" component={Computer} />
   
             </Switch>
       
