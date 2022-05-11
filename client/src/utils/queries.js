@@ -11,7 +11,6 @@ export const QUERY_PRODUCTS = gql`
       image
       category {
         _id
-        name
       }
     }
   }
@@ -33,10 +32,7 @@ export const QUERY_ALL_PRODUCTS = gql`
       description
       price
       quantity
-      category {
-          name
-          _id
-      }
+      category 
     }
   }
 `;
@@ -53,7 +49,6 @@ export const QUERY_CATEGORIES = gql`
 export const QUERY_USER = gql`
   {
     user {
-        _id
       firstName
       lastName
       orders {
@@ -72,38 +67,12 @@ export const QUERY_USER = gql`
   }
 `;
 
-export const USER = gql `
-query User {
-  user {
-    _id
-    firstName
-    lastName
-    email
-    orders {
-      _id
-    products {
-      _id
-      name
-      price
-      category {
-        _id
-        name
-      }
-      description
-      quantity
-    }
-  }
-}
-}
-`;
-
 export const QUERY_USER_AND_PRODUCTS = gql `
 {
   categories {
     _id
     name
   }
-
   products {
     _id
     name
