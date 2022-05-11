@@ -16,7 +16,8 @@ const resolvers = {
     },
     user: async (parent, args, context) => {
       if (context) {
-        const user = await User.findById(context._id).populate({
+        const user = await User.findById(context._id)
+        .populate({
           path: 'orders.products',
           populate: 'category'
         });
