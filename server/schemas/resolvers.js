@@ -8,27 +8,16 @@ const resolvers = {
     categories: async () => {
       return await Category.find();
     },
-    products: async (parent, { category, name }) => {
-      const params = {};
-
-      if (category) {
-        params.category = category;
-      }
-
-      if (name) {
-        params.name = {
-          $regex: name
-        };
-      }
-
-      return await Product.find(params).populate('category');
+    products: async () => {
+      return await Product.find();
     },
     product: async (parent, { _id }) => {
       return await Product.findById(_id).populate('category');
     },
     user: async (parent, args, context) => {
-      if (context.user) {
-        const user = await User.findById(context.user._id).populate({
+      if (context) {
+        const user = await User.findById(context._id)
+        .populate({
           path: 'orders.products',
           populate: 'category'
         });
@@ -63,7 +52,6 @@ const resolvers = {
         const product = await stripe.products.create({
           name: products[i].name,
           description: products[i].description,
-          images: [`${url}/images/${products[i].image}`]
         });
 
         const price = await stripe.prices.create({
